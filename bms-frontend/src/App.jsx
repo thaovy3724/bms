@@ -1,9 +1,28 @@
 
+import { Routes, Route } from 'react-router-dom'
+import Header from './components/shared/Header'
+import Footer from './components/shared/Footer'
+import Home from './pages/Home'
+import Movies from './pages/Movies'
+import MovieDetails from './pages/MovieDetails'
+
 function App() {
 
   return (
     <>
-      <h1 className="text-center text-4xl mt-10 underline">Welcome to BookMyScreen</h1>
+    <div className='flex flex-col min-h-screen'>
+      <main className='flex-grow'>
+        <Header/>
+        <Routes>
+          {/* Define your routes here */}
+          <Route path="/" element={<Home/>} />
+          <Route path="/profile/:id" element={<h1>Profile Page</h1>} />
+          <Route path="/movies" element={<Movies/>} />
+          <Route path="/movies/:id" element={<MovieDetails/>} />
+        </Routes>
+      </main>
+      <Footer/>
+    </div>
     </>
   )
 }

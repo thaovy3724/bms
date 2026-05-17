@@ -254,7 +254,7 @@ export const events = [
   },
 ];
 
-export const theatres = [
+export const theaters = [
   {
     name: "INOX Quest Mall, Ballygunge, Kolkata",
     distance: "2.0 km",
